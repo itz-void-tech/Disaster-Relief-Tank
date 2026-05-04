@@ -2,8 +2,7 @@
   <h1>🚨 Disaster Relief Tank 🚨</h1>
   <p>An autonomous, sensor-rich robotic vehicle for disaster response, environmental monitoring, and search & rescue operations.</p>
 
-  <!-- PLACEHOLDER FOR HERO IMAGE -->
-  <img src="<!-- ADD YOUR HERO IMAGE PATH HERE -->" alt="Disaster Relief Tank Hero Image" width="80%">
+  <img src="images/tank.jpeg" alt="Disaster Relief Tank Hero Image" width="80%">
 </div>
 
 ---
@@ -26,18 +25,24 @@ The **Disaster Relief Tank** is an ESP32-powered, highly mobile robotic platform
 
 ## 📸 Project Gallery
 
-<!-- PLACEHOLDERS FOR PROJECT IMAGES -->
 <div align="center">
   <table>
     <tr>
-      <td><img src="<!-- ADD IMAGE PATH HERE -->" alt="Front View" width="400"/></td>
-      <td><img src="<!-- ADD IMAGE PATH HERE -->" alt="Dashboard View" width="400"/></td>
+      <td><img src="images/webpage-tank.jpeg" alt="Dashboard View" width="400"/></td>
+      <td><img src="images/sensor-monitor.jpeg" alt="Sensor Monitor" width="400"/></td>
     </tr>
     <tr>
-      <td><img src="<!-- ADD IMAGE PATH HERE -->" alt="Sensor Array" width="400"/></td>
-      <td><img src="<!-- ADD IMAGE PATH HERE -->" alt="Action Shot" width="400"/></td>
+      <td><img src="images/tank-telegram.jpeg" alt="Telegram Integration" width="400"/></td>
+      <td><img src="images/ai-webpage.jpeg" alt="AI Webpage Interface" width="400"/></td>
     </tr>
   </table>
+</div>
+
+---
+
+## 🏆 Awards & Recognition
+<div align="center">
+  <img src="images/award.jpeg" alt="Project Award" width="60%">
 </div>
 
 ---
