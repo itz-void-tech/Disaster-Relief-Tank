@@ -1,8 +1,62 @@
-# Hardware Wiring Guide
+<div align="center">
+  <h1>🚨 Disaster Relief Tank 🚨</h1>
+  <p>An autonomous, sensor-rich robotic vehicle for disaster response, environmental monitoring, and search & rescue operations.</p>
+
+  <!-- PLACEHOLDER FOR HERO IMAGE -->
+  <img src="<!-- ADD YOUR HERO IMAGE PATH HERE -->" alt="Disaster Relief Tank Hero Image" width="80%">
+</div>
+
+---
+
+## 📖 Overview
+
+The **Disaster Relief Tank** is an ESP32-powered, highly mobile robotic platform designed to operate in hazardous environments. It gathers critical real-time environmental data (temperature, gas, dust), tracks its location via GPS, and features an auto-return system to ensure recovery if connection is lost. The vehicle can be monitored via a dedicated dashboard and remotely controlled using a Telegram bot.
+
+---
+
+## ✨ Key Features
+
+- **🌐 Remote Telemetry & Control:** Manage the vehicle and monitor sensor data remotely via a Telegram Bot.
+- **🛰️ GPS & Auto-Return-to-Home (RTH):** Uses GNSS for precise location tracking. Auto-return logic safely guides the vehicle back to its starting point upon signal loss.
+- **🌬️ Environmental Monitoring:** Equipped with DHT11/22 (Temp/Humidity), MQ-2 (Gas/Smoke), and Sharp Optical Dust sensors for real-time hazard assessment.
+- **🧭 Advanced Navigation:** Integrated MPU6050 (IMU) and Magnetometer for accurate heading and orientation.
+- **🔋 Power Management:** INA3221 voltage and current sensor for continuous battery and power distribution monitoring.
+
+---
+
+## 📸 Project Gallery
+
+<!-- PLACEHOLDERS FOR PROJECT IMAGES -->
+<div align="center">
+  <table>
+    <tr>
+      <td><img src="<!-- ADD IMAGE PATH HERE -->" alt="Front View" width="400"/></td>
+      <td><img src="<!-- ADD IMAGE PATH HERE -->" alt="Dashboard View" width="400"/></td>
+    </tr>
+    <tr>
+      <td><img src="<!-- ADD IMAGE PATH HERE -->" alt="Sensor Array" width="400"/></td>
+      <td><img src="<!-- ADD IMAGE PATH HERE -->" alt="Action Shot" width="400"/></td>
+    </tr>
+  </table>
+</div>
+
+---
+
+## 🛠️ Tech Stack
+
+- **Microcontroller:** ESP32
+- **Programming Languages:** C++ (Arduino IDE), Python
+- **Navigation:** GPS (EVE L89), MPU6050, Magnetometer
+- **Sensors:** DHT11/22, MQ-2, Sharp Optical Dust, INA3221
+- **Communication:** Telegram Bot API, Serial Communication
+
+---
+
+## ⚡ Hardware Wiring Guide
 
 This document outlines the pinout and wiring connections between the ESP32 microcontroller and the various environmental sensors, navigation modules, and motor drivers used in the system.
 
-## 🌡️ Environmental Sensors
+### 🌡️ Environmental Sensors
 
 | Component | Sensor Pin | ESP32 Pin / Connection | Notes |
 | :--- | :--- | :--- | :--- |
@@ -19,9 +73,7 @@ This document outlines the pinout and wiring connections between the ESP32 micro
 | | S-GND | GND | |
 | | S-OUT | **GPIO 35 (ADC)** | **⚠️ Recommended:** Use a voltage divider to step 5V down to 3.3V. |
 
----
-
-## 🧭 Navigation, IMU, Power & Motors
+### 🧭 Navigation, IMU, Power & Motors
 
 | Component | Pin / Function | ESP32 Connection | Notes |
 | :--- | :--- | :--- | :--- |
@@ -40,18 +92,54 @@ This document outlines the pinout and wiring connections between the ESP32 micro
 | | IN3 (Right)| **GPIO 27** | |
 | | IN4 (Right)| **GPIO 14** | |
 
----
+### ⚠️ Important Hardware Notes
 
-## ⚠️ Important Hardware Notes
-
-### 1. I2C Bus Configuration
+#### 1. I2C Bus Configuration
 The MPU6050, Magnetometer, and INA3221 all share the same I2C bus:
 * **SDA:** GPIO 21
 * **SCL:** GPIO 22
 > **Note:** Ensure each device has a unique I2C address to avoid bus conflicts.
 
-### 2. Logic Level Protection (5V to 3.3V)
+#### 2. Logic Level Protection (5V to 3.3V)
 The ESP32 uses strict 3.3V logic. **Do not connect 5V output pins directly to ESP32 GPIOs.** As noted in the tables, use voltage dividers for 5V analog outputs (like the MQ-2 Gas Sensor and Sharp Optical Dust Sensor) to protect the ESP32's ADC pins (GPIO 34 and GPIO 35).
 
-### 3. Power Distribution
+#### 3. Power Distribution
 Sensors requiring 5V (MQ-2, Sharp Optical Dust) must be powered from the `VIN`/`VUSB` pin, assuming the ESP32 is powered via USB or a stable 5V regulator. Be cautious of the total current draw, especially when the MQ-2 heater is active.
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+- **Arduino IDE** (with ESP32 board manager installed)
+- **Python 3.x** (for `gps_auto_return.py` and `auto_return.py` scripts)
+- Required Arduino Libraries:
+  - `DHT sensor library`
+  - `Adafruit MPU6050`
+  - `TinyGPS++`
+  - `UniversalTelegramBot`
+  - `Adafruit INA3221` (or equivalent)
+
+### Installation & Setup
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/your-username/Disaster-Relief-Tank.git
+   cd Disaster-Relief-Tank
+   ```
+2. **Flash the ESP32:**
+   - Open `final-car.ino` or `car_with_telegram.ino` in Arduino IDE.
+   - Update your Wi-Fi credentials and Telegram Bot Token inside the code.
+   - Compile and upload to the ESP32.
+3. **Run Python Scripts:**
+   - For auto-return functionalities, connect the respective components and run the python scripts provided.
+   ```bash
+   python gps_auto_return.py
+   ```
+
+---
+
+## 🤝 Contributing
+Contributions, issues, and feature requests are welcome! Feel free to check the issues page.
+
+## 📜 License
+This project is licensed under the MIT License - see the LICENSE file for details.
