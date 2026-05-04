@@ -1,5 +1,7 @@
 <div align="center">
-  <h1>🚨 Disaster Relief Tank 🚨</h1>
+  <!-- Animated Typing Title -->
+  <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&size=40&pause=1000&color=FF0000&center=true&vCenter=true&width=800&height=80&lines=%F0%9F%9A%A8+Disaster+Relief+Tank+%F0%9F%9A%A8;Autonomous+Robotic+Vehicle;Environmental+Monitoring;Search+%26+Rescue+Operations" alt="Typing SVG" /></a>
+  
   <p>An autonomous, sensor-rich robotic vehicle for disaster response, environmental monitoring, and search & rescue operations.</p>
 
   <img src="images/tank.jpeg" alt="Disaster Relief Tank Hero Image" width="80%">
@@ -28,12 +30,24 @@ The **Disaster Relief Tank** is an ESP32-powered, highly mobile robotic platform
 <div align="center">
   <table>
     <tr>
-      <td><img src="images/webpage-tank.jpeg" alt="Dashboard View" width="400"/></td>
-      <td><img src="images/sensor-monitor.jpeg" alt="Sensor Monitor" width="400"/></td>
+      <td align="center">
+        <h3>💻 Dashboard View</h3>
+        <img src="images/webpage-tank.jpeg" alt="Dashboard View" width="400"/>
+      </td>
+      <td align="center">
+        <h3>📊 Sensor Monitor</h3>
+        <img src="images/sensor-monitor.jpeg" alt="Sensor Monitor" width="400"/>
+      </td>
     </tr>
     <tr>
-      <td><img src="images/tank-telegram.jpeg" alt="Telegram Integration" width="400"/></td>
-      <td><img src="images/ai-webpage.jpeg" alt="AI Webpage Interface" width="400"/></td>
+      <td align="center">
+        <h3>📱 Telegram Integration</h3>
+        <img src="images/tank-telegram.jpeg" alt="Telegram Integration" width="400"/>
+      </td>
+      <td align="center">
+        <h3>🤖 AI Webpage Interface</h3>
+        <img src="images/ai-webpage.jpeg" alt="AI Webpage Interface" width="400"/>
+      </td>
     </tr>
   </table>
 </div>
