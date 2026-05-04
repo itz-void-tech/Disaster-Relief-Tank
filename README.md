@@ -1,4 +1,6 @@
 <div align="center">
+  <h1><img src="https://fonts.gstatic.com/s/e/notoemoji/latest/1f6a8/512.gif" alt="🚨" width="40" height="40"> Disaster Relief Tank <img src="https://fonts.gstatic.com/s/e/notoemoji/latest/1f6a8/512.gif" alt="🚨" width="40" height="40"></h1>
+  
   <!-- Animated Typing Title -->
   <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&size=40&pause=1000&color=FF0000&center=true&vCenter=true&width=800&height=80&lines=%F0%9F%9A%A8+Disaster+Relief+Tank+%F0%9F%9A%A8;Autonomous+Robotic+Vehicle;Environmental+Monitoring;Search+%26+Rescue+Operations" alt="Typing SVG" /></a>
   
@@ -25,6 +27,14 @@ The **Disaster Relief Tank** is an ESP32-powered, highly mobile robotic platform
 
 ---
 
+## 🤖 AI Dashboard Interface
+
+<div align="center">
+  <img src="images/ai-webpage.jpeg" alt="AI Webpage Interface" width="80%">
+</div>
+
+---
+
 ## 📸 Project Gallery
 
 <div align="center">
@@ -40,13 +50,9 @@ The **Disaster Relief Tank** is an ESP32-powered, highly mobile robotic platform
       </td>
     </tr>
     <tr>
-      <td align="center">
+      <td align="center" colspan="2">
         <h3>📱 Telegram Integration</h3>
         <img src="images/tank-telegram.jpeg" alt="Telegram Integration" width="400"/>
-      </td>
-      <td align="center">
-        <h3>🤖 AI Webpage Interface</h3>
-        <img src="images/ai-webpage.jpeg" alt="AI Webpage Interface" width="400"/>
       </td>
     </tr>
   </table>
